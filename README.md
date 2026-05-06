@@ -20,14 +20,14 @@ The model is downloaded automatically from HuggingFace Hub on first run and cach
 ## Installation
 
 ```bash
-pip install -e .
+pip install -r requirements.txt
 ```
 
 For CUDA inference, install the appropriate PyTorch build first:
 
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/cu124
-pip install -e .
+pip install -r requirements.txt
 ```
 
 ## Usage

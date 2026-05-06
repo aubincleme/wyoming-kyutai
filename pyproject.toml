@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 69"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "wyoming-kyutai"
+version = "0.1.0"
+description = "Wyoming protocol server for Kyutai STT models"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "wyoming >= 1.5.4",
+    "moshi >= 0.2.5",
+    "torch",
+    "sphn",
+    "sentencepiece",
+]
+
+[project.optional-dependencies]
+zeroconf = ["wyoming[zeroconf]"]
+
+[project.scripts]
+wyoming-kyutai = "wyoming_kyutai:run"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wyoming_kyutai*"]
